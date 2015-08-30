@@ -29,6 +29,12 @@ parameters:
     active_at:     { extends: CaseModel.active_at.output }
     received_at:   { extends: CaseModel.received_at.output }
     locked_until:  { extends: CaseModel.locked_until.output }
+    customer_id:
+        location: links
+        sentAs: customer
+        data:
+            class: customer
+            href: "/api/v2/customers/{value}"
     self:
         location: links
         data:
